@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+
+@using Service.Models
+@Model IEnumerable <EmployeeModel>
+
+
+    
+   
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+
+    </head>
+    <body>
+    <dd>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>IPN</th>
+                
+            </tr>
+            <br />
+            <br />
+            <br />
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>
+                            @p.Name
+                    </td>
+                    <td>
+                            @p.Address
+                    </td>
+                    <td>
+                            @p.IPN
+                    </td>
+                            
+
+
+                </tr>
+             }
+        </table>
+    </dd>
+    </body>
+</html>
+
+
+   

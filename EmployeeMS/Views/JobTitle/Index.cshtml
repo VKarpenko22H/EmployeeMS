@@ -1,0 +1,58 @@
+﻿
+<!DOCTYPE html>
+@{
+    Layout = null;
+}
+
+@using Service.Models
+@Model IEnumerable <JobTitleModel>
+
+
+   
+    <head>
+        <meta name="viewport" content="width=device-width" />
+
+    </head>
+    <body>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Subdivision</th>
+                <th>Group</th>
+                <th>Salary</th>
+                <th>Id</th>
+            </tr>
+            <br />
+            <br />
+            <br />
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>
+                        @p.Name
+                    </td>
+                    <td>
+                        @p.Department
+                    </td>
+                    <td>
+                        @p.Subdivision
+                    </td>
+                    <td>
+                        @p.Group
+                    </td>
+
+                    <td>
+                        @p.Salary
+                    </td>
+                    <td>
+                        @p.Id
+                    </td>
+
+
+                </tr>
+            }
+        </table>
+    </body>
+
+

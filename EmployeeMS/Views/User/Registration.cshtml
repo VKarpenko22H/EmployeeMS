@@ -1,0 +1,34 @@
+﻿
+
+@using Service.Models;
+@model RegisterBindingModel;
+
+<h3>Register</h3>
+
+<form asp-controller="User" asp-action="Registration" method="post">
+    <br />
+    <label asp-for="Login"></label>
+    <br />
+    <input asp-for="Login" />
+    
+    <span asp-validation-for="Login"></span>
+    <br />
+    
+    <label asp-for="Password"></label>
+    <br />
+    <input asp-for="Password" />
+    
+    <span asp-validation-for="Password"></span>
+    <br />
+    
+    <label asp-for="PasswordConfirm"></label>
+    <br />
+    <input asp-for="PasswordConfirm" />
+    
+    <span asp-validation-for="PasswordConfirm"></span>
+    <br />
+    
+    <div asp-validation-summary="ModelOnly"></div>
+    <button type="submit">Register</button>
+</form>
+

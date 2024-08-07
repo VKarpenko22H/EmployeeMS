@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+}
+
+@using Service.Models;
+@model JobTitleModel;
+
+
+<table class="table">
+    <div class="card col-md-4">
+        <form asp-action="CreateJobTitle" asp-controller="JobTitle" method="post">
+            <div asp-validation-summary="All" style=" " font-size:23px;font-family:Impact"class="text-danger">
+                
+                    
+               
+                <div class="card col-lg-1">
+                    <label class="form-label">Name</label>
+                    <br />
+                    <input type="text" asp-for="Name" class="form-control" />
+                </div>
+                <div class="card .col-xl-1">
+                    <label class="form-label">Department</label>
+                    <br />
+                    <input type="text" asp-for="Department" class="form-control" />
+                </div>
+                <div class="card col-md-1">
+                    <label class="form-label">Subdivision</label>
+                    <br />
+                    <input type="text" asp-for="Subdivision" class="form-control" />
+                </div>
+                <div class="card .col-sm-1">
+                    <label class="form-label">Group</label>
+                    <br />
+                    <input type="text" asp-for="Group" class="form-control" />
+                </div>
+
+                <div class="card .col-sm-1">
+                    <label class="form-label">Salary</label>
+                    <br />
+                    <input type="text" asp-for="Salary" class="form-control" />
+                </div>
+                <div>
+                    <button class=" btn btn-primary float-right" type="submit">Відправити</button>
+                </div>
+            </div>
+
+        </form>
+</table>
+    
+
+                    

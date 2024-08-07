@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+@using Service.Models;
+@model EmployeeModel;
+
+
+
+
+
+
+
+
+<table class="table">
+
+    <div class="card col-md-4">
+        <form asp-action="UpdateEmployee" asp-controller="Employee" method="post">
+            <div asp-validation-summary="All" style=" " font-size:23px;font-family:Impact"class="text-danger">
+                <div class="card col-lg-1">
+                    <label class="form-label">Name</label>
+                    <br />
+                    <input type="text" asp-for="Name" class="form-control" />
+                </div>
+                <div class="card .col-xl-1">
+                    <label class="form-label">Address</label>
+                    <br />
+                    <input type="text" asp-for="Address" class="form-control" />
+                </div>
+                <div class="card col-md-1">
+                    <label class="form-label">IPN</label>
+                    <br />
+                    <input type="text" asp-for="IPN" class="form-control" />
+                </div>
+                <div class="card .col-sm-1">
+                    <label class="form-label">JobTitle</label>
+                    <input type="text" asp-for="JobTitle" class="form-control" />
+                </div>
+                <div>
+                    <button class=" btn btn-primary float-right" type="submit">Відправити</button>
+                </div>
+            </div>
+
+        </form>
+</table>
